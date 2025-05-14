@@ -65,6 +65,7 @@ CDS = "".join(
     for aa in result
     if aa in CODON_TABLE
     )
+```
 ### Multiple Sequence Alignment
 
 Call Mafft to align reference and variant sequences
@@ -99,3 +100,16 @@ var:   ATG) CAC  GCC)  CGT)  CCG)  GTT)  GAC)  CCT)  CAG)  CGA)  TCG)  CCT)  GAC
 
  Codon alignment score: 569
 ```
+### Mutantion File output example
+| VarID | Position | RefCodon | VarCodon | RefAA | VarAA | Type           | Score |
+|-------|----------|----------|----------|--------|--------|----------------|--------|
+| Var1  | 2        | ATG      | CAC      | M      | H      | nonsynonymous  | -2     |
+| Var1  | 4        | CGA      | CGT      | R      | R      | synonymous     | 1      |
+| Var1  | 5        | CCT      | CCG      | P      | P      | synonymous     | 1      |
+| Var1  | 7        | GAT      | GAC      | D      | D      | synonymous     | 1      |
+| Var1  | 8        | CCG      | CCT      | P      | P      | synonymous     | 1      |
+| Var1  | 15       | CGC      | CGA      | R      | R      | synonymous     | 1      |
+| Var1  | 16       | TCA      | TCG      | S      | S      | synonymous     | 1      |
+| Var1  | 18       | GAT      | GAC      | D      | D      | synonymous     | 1      |
+| Var1  | 19       | CCT      | CCC      | P      | P      | synonymous     | 1      |
+| Var1  | 20       | ACG      | ACA      | T      | T      | synonymous     | 1      |
